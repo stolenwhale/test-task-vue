@@ -1,0 +1,84 @@
+@import "./mixins.scss";
+
+.socials {
+  max-width: 260px;
+  padding: 17px 20px;
+  margin-top: -10px;
+  background-color: #fff6e0;
+
+  @include for-tablet {
+    max-width: 170px;
+  }
+
+  @include for-phones {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  h2 {
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .description {
+    font-size: 12px;
+    color: #333333;
+    display: inline-block;
+    margin-bottom: 23px;
+  }
+  .social {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 13px 10px 13px 57px;
+    margin-bottom: 15px;
+    text-align: start;
+    font-size: 14px;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+
+    &:before {
+      position: absolute;
+      content: "";
+    }
+
+    &.Facebook {
+      background-color: #1d59a3;
+      &:before {
+        width: 9px;
+        height: 19px;
+        left: 30px;
+        background-image: url("../images/fb_icon.png");
+      }
+    }
+    &.Вконтакте {
+      background-color: #1c608d;
+      &:before {
+        width: 26px;
+        height: 14px;
+        left: 20px;
+        background-image: url("../images/vk_icon.png");
+      }
+    }
+    &.Twitter {
+      background-color: #00b2e6;
+      &:before {
+        width: 20px;
+        height: 17px;
+        left: 25px;
+        background-image: url("../images/twitter_icon.png");
+      }
+    }
+    &.Одноклассники {
+      background-color: #ef7800;
+      &:before {
+        width: 11px;
+        height: 18px;
+        left: 30px;
+        background-image: url("../images/ok_icon.png");
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+@import "./mixins.scss";
+
+.settings {
+  width: 50%;
+  margin-right: 20px;
+
+  @include for-tablet {
+    width: 70%;
+  }
+  @include for-phones {
+    width: 100%;
+    margin-right: 0;
+  }
+  .setting-item {
+    padding: 15px 20px;
+    max-width: 560px;
+    border: 1px solid #d5d5d5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-tablet {
+      padding: 10px;
+    }
+  }
+
+  .address-book {
+    .address-list.setting-item {
+      display: block;
+      position: relative;
+      .header {
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .change-button {
+        position: absolute;
+        right: 20px;
+        top: 28px;
+        @include for-phones {
+          position: relative;
+          right: 0;
+          top: 0;
+          margin-bottom: 10px;
+        }
+      }
+      .address {
+        position: relative;
+        font-size: 12px;
+        .address-input {
+          width: 70%;
+        }
+        .delete-button {
+          position: absolute;
+          top: 2px;
+          right: 0;
+          @include for-phones {
+            position: relative;
+            top: 0;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+
+    .new-address-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include for-phones {
+        display: block;
+      }
+      .field {
+        padding: 5px 10px;
+        margin-bottom: 10px;
+        width: 30%;
+        @include for-phones {
+          display: block;
+          width: 85%;
+        }
+        &.address-field {
+          width: 100%;
+          @include for-phones {
+            width: 85%;
+          }
+        }
+      }
+      .save-address-button {
+        margin: 10px 0 0 auto;
+        padding: 10px 50px;
+        border: none;
+        background-color: #e85a22;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .subscribe {
+    .block {
+      display: block;
+      font-family: Verdana;
+      font-size: 14px;
+      font-weight: 400;
+      color: #333333;
+    }
+  }
+}

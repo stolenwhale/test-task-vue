@@ -1,0 +1,81 @@
+@import "./settings.scss";
+@import "./socials.scss";
+@import "./mixins.scss";
+
+body {
+  margin: 0;
+  font-family: Verdana;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  @include for-tablet {
+    max-width: 600px;
+  }
+
+  @include for-phones {
+    max-width: 320px;
+  }
+}
+
+h1 {
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.section-header {
+  font-family: Verdana;
+  font-size: 18px;
+  color: #333333;
+}
+.input-button {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &.gray-button {
+    color: #a7a7a7;
+    &:hover {
+      color: #e85a22;
+    }
+  }
+  &.red-button {
+    color: #e85a22;
+  }
+}
+.setting-item {
+  font-family: Verdana;
+
+  &.active {
+    background-color: #f4f4f4;
+  }
+  input {
+    border: 1px solid #d5d5d5;
+    background-color: #ffffff;
+    padding: 5px 10px;
+  }
+
+  input:disabled {
+    border: none;
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.page-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  @include for-phones {
+    flex-wrap: wrap;
+  }
+}
